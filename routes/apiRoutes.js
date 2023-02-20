@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const store = require('../db/store');
-
+console.log(store);
 // post request add a new note
 router.get('/notes', (req, res) => {
+    console.log(store.getNotes());
     // log that a post request us received
     store
         .getNotes()
